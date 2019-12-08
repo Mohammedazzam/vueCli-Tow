@@ -8,10 +8,10 @@ import UsersViewPage from './components/users/UsersViewPage.vue'
 
 
 const routes =[
-    {path: "/", component: HomePage},
+    {path: "/", component: HomePage, name:"home"},
     {path: "/about", component: AboutUsPage},
     {path: "/posts", component: PostsPage},
-    {path: "/posts/:id", component: PostPage, props: true},
+    {path: "/posts/:id", component: PostPage, props: true,name:"single-post"},
     {path: "/users", component: Userspage,children:[
         {path: "",component:UsersHomePage},
         {path: ":id",component:UsersViewPage, props: true}
